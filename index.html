@@ -1,0 +1,40 @@
+
+<!doctype html>
+<html lang=en-GB>
+  <head>
+    <meta charset='utf-8'>
+    <title>PWA Bet</title>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <link rel='canonical' href='https://pwa.chriswalker.io/'>
+    <link rel='manifest' href='manifest.json'>
+    <meta name='mobile-web-app-capable' content='yes'>
+    <meta name='apple-mobile-web-app-capable' content='yes'>
+    <meta name='application-name' content='PWA Bet'>
+  </head>
+  <style>
+    .container {
+      text-align: center;
+      padding-top: 100px;
+    }
+    .container h1 {
+      padding-top: 100px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <h1>A Betting App</h1>
+      <a href="https://chriswalker.io">chriswalker.io</a>
+    </div>
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(function(registration) {
+                console.log('Service Worker Registered');
+          });
+        navigator.serviceWorker.ready.then(function(registration) {
+           console.log('Service Worker Ready');
+        });
+      }
+    </script>
+  </body>
+</html>
