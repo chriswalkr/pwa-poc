@@ -1,6 +1,6 @@
 {
   "name": "PWA Limoncello",
-  "short_name": "PWA Limoncello",
+  "short_name": "Limon",
   "start_url": "/?homescreen=1",
   "scope": "/",
   "display": "standalone",
